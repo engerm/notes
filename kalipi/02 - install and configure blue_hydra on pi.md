@@ -24,70 +24,70 @@ bluez bluez-test-scripts python-bluez python-dbus libsqlite3-dev ubertooth
 1. Optional: check dependancies. Execute:
 
     ```
-dpkg -l | egrep "bluez|libsqlite3-dev|ubertooth|dbus|ruby-dev|bundler"
+    dpkg -l | egrep "bluez|libsqlite3-dev|ubertooth|dbus|ruby-dev|bundler"
     ```
 
  * result for default Kali Pi/Arm install:
 
     ```
-ii  at-spi2-core                         2.30.0-2                    armhf        Assistive Technology Service Provider Interface (dbus core)
-ii  bluez                                5.50-1                      armhf        Bluetooth tools and daemons
-ii  bluez-firmware                       1.2-4                       all          Firmware for Bluetooth devices
-ii  bundler                              1.16.1-3                    all          Manage Ruby application dependencies
-ii  dbus                                 1.12.10-1                   armhf        simple interprocess messaging system (daemon and utilities)
-ii  dbus-user-session                    1.12.10-1                   armhf        simple interprocess messaging system (systemd --user integration)
-ii  dbus-x11                             1.12.10-1                   armhf        simple interprocess messaging system (X11 deps)
-ii  libdbus-1-3:armhf                    1.12.10-1                   armhf        simple interprocess messaging system (library)
-ii  libdbus-glib-1-2:armhf               0.110-3                     armhf        deprecated library for D-Bus IPC
-ii  libdbusmenu-glib4:armhf              16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus
-ii  libdbusmenu-gtk3-4:armhf             16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus - GTK-3+ version
-ii  libnet-dbus-perl                     1.1.0-4+b3                  armhf        Perl extension for the DBus bindings
-ii  libqt5dbus5:armhf                    5.11.1+dfsg-9               armhf        Qt 5 D-Bus module
-ii  python-dbus                          1.2.8-2+b1                  armhf        simple interprocess messaging system (Python interface)
-ii  ruby-bundler                         1.16.1-3                    all          Manage Ruby application dependencies (runtime)
-ii  ruby-dev:armhf                       1:2.5.1                     armhf        Header files for compiling extension modules for Ruby (default version)
+    ii  at-spi2-core                         2.30.0-2                    armhf        Assistive Technology Service Provider Interface (dbus core)
+    ii  bluez                                5.50-1                      armhf        Bluetooth tools and daemons
+    ii  bluez-firmware                       1.2-4                       all          Firmware for Bluetooth devices
+    ii  bundler                              1.16.1-3                    all          Manage Ruby application dependencies
+    ii  dbus                                 1.12.10-1                   armhf        simple interprocess messaging system (daemon and utilities)
+    ii  dbus-user-session                    1.12.10-1                   armhf        simple interprocess messaging system (systemd --user integration)
+    ii  dbus-x11                             1.12.10-1                   armhf        simple interprocess messaging system (X11 deps)
+    ii  libdbus-1-3:armhf                    1.12.10-1                   armhf        simple interprocess messaging system (library)
+    ii  libdbus-glib-1-2:armhf               0.110-3                     armhf        deprecated library for D-Bus IPC
+    ii  libdbusmenu-glib4:armhf              16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus
+    ii  libdbusmenu-gtk3-4:armhf             16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus - GTK-3+ version
+    ii  libnet-dbus-perl                     1.1.0-4+b3                  armhf        Perl extension for the DBus bindings
+    ii  libqt5dbus5:armhf                    5.11.1+dfsg-9               armhf        Qt 5 D-Bus module
+    ii  python-dbus                          1.2.8-2+b1                  armhf        simple interprocess messaging system (Python interface)
+    ii  ruby-bundler                         1.16.1-3                    all          Manage Ruby application dependencies (runtime)
+    ii  ruby-dev:armhf                       1:2.5.1                     armhf        Header files for compiling extension modules for Ruby (default version)
     ```
 
 1. Install the following dependancies as root:
 
     ```
-apt-get -yf install bluez bluez-test-scripts python-bluez python-dbus libsqlite3-dev ubertooth
+    apt-get -yf install bluez bluez-test-scripts python-bluez python-dbus libsqlite3-dev ubertooth
     ```
 
 1. Optional: check dependancies. Execute:
 
     ```
-dpkg -l | egrep "bluez|libsqlite3-dev|ubertooth|dbusruby-dev|bundler"
+    dpkg -l | egrep "bluez|libsqlite3-dev|ubertooth|dbusruby-dev|bundler"
     ```
 
  * result for default Kali Pi/Arm install:
 
     ```
-ii  at-spi2-core                         2.30.0-2                    armhf        Assistive Technology Service Provider Interface (dbus core)
-ii  bluez                                5.50-1                      armhf        Bluetooth tools and daemons
-ii  bluez-firmware                       1.2-4                       all          Firmware for Bluetooth devices
-ii  bluez-test-scripts                   5.50-1                      all          test scripts of bluez
-ii  bundler                              1.16.1-3                    all          Manage Ruby application dependencies
-ii  dbus                                 1.12.10-1                   armhf        simple interprocess messaging system (daemon and utilities)
-ii  dbus-user-session                    1.12.10-1                   armhf        simple interprocess messaging system (systemd --user integration)
-ii  dbus-x11                             1.12.10-1                   armhf        simple interprocess messaging system (X11 deps)
-ii  libdbus-1-3:armhf                    1.12.10-1                   armhf        simple interprocess messaging system (library)
-ii  libdbus-glib-1-2:armhf               0.110-3                     armhf        deprecated library for D-Bus IPC
-ii  libdbusmenu-glib4:armhf              16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus
-ii  libdbusmenu-gtk3-4:armhf             16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus - GTK-3+ version
-ii  libnet-dbus-perl                     1.1.0-4+b3                  armhf        Perl extension for the DBus bindings
-ii  libqt4-dbus:armhf                    4:4.8.7+dfsg-17             armhf        Qt 4 D-Bus module
-ii  libqt5dbus5:armhf                    5.11.1+dfsg-9               armhf        Qt 5 D-Bus module
-ii  libqtdbus4:armhf                     4:4.8.7+dfsg-17             armhf        Qt 4 D-Bus module library
-ii  libsqlite3-dev:armhf                 3.25.2-1                    armhf        SQLite 3 development files
-ii  libubertooth1:armhf                  2018.08.R1-3                armhf        Shared library for Bluetooth experimentation
-ii  python-bluez                         0.22+really0.22-1           armhf        Python 2 wrappers around BlueZ for rapid bluetooth development
-ii  python-dbus                          1.2.8-2+b1                  armhf        simple interprocess messaging system (Python interface)
-ii  qdbus                                4:4.8.7+dfsg-17             armhf        Qt 4 D-Bus tool
-ii  ruby-bundler                         1.16.1-3                    all          Manage Ruby application dependencies (runtime)
-ii  ruby-dev:armhf                       1:2.5.1                     armhf        Header files for compiling extension modules for Ruby (default version)
-ii  ubertooth                            2018.08.R1-3                armhf        2.4 GHz wireless development platform for Bluetooth experimentation
-ii  ubertooth-firmware                   2018.08.R1-3                all          Firmware for Ubertooth
+    ii  at-spi2-core                         2.30.0-2                    armhf        Assistive Technology Service Provider Interface (dbus core)
+    ii  bluez                                5.50-1                      armhf        Bluetooth tools and daemons
+    ii  bluez-firmware                       1.2-4                       all          Firmware for Bluetooth devices
+    ii  bluez-test-scripts                   5.50-1                      all          test scripts of bluez
+    ii  bundler                              1.16.1-3                    all          Manage Ruby application dependencies
+    ii  dbus                                 1.12.10-1                   armhf        simple interprocess messaging system (daemon and utilities)
+    ii  dbus-user-session                    1.12.10-1                   armhf        simple interprocess messaging system (systemd --user integration)
+    ii  dbus-x11                             1.12.10-1                   armhf        simple interprocess messaging system (X11 deps)
+    ii  libdbus-1-3:armhf                    1.12.10-1                   armhf        simple interprocess messaging system (library)
+    ii  libdbus-glib-1-2:armhf               0.110-3                     armhf        deprecated library for D-Bus IPC
+    ii  libdbusmenu-glib4:armhf              16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus
+    ii  libdbusmenu-gtk3-4:armhf             16.04.1+18.04.20171206-1    armhf        library for passing menus over DBus - GTK-3+ version
+    ii  libnet-dbus-perl                     1.1.0-4+b3                  armhf        Perl extension for the DBus bindings
+    ii  libqt4-dbus:armhf                    4:4.8.7+dfsg-17             armhf        Qt 4 D-Bus module
+    ii  libqt5dbus5:armhf                    5.11.1+dfsg-9               armhf        Qt 5 D-Bus module
+    ii  libqtdbus4:armhf                     4:4.8.7+dfsg-17             armhf        Qt 4 D-Bus module library
+    ii  libsqlite3-dev:armhf                 3.25.2-1                    armhf        SQLite 3 development files
+    ii  libubertooth1:armhf                  2018.08.R1-3                armhf        Shared library for Bluetooth experimentation
+    ii  python-bluez                         0.22+really0.22-1           armhf        Python 2 wrappers around BlueZ for rapid bluetooth development
+    ii  python-dbus                          1.2.8-2+b1                  armhf        simple interprocess messaging system (Python interface)
+    ii  qdbus                                4:4.8.7+dfsg-17             armhf        Qt 4 D-Bus tool
+    ii  ruby-bundler                         1.16.1-3                    all          Manage Ruby application dependencies (runtime)
+    ii  ruby-dev:armhf                       1:2.5.1                     armhf        Header files for compiling extension modules for Ruby (default version)
+    ii  ubertooth                            2018.08.R1-3                armhf        2.4 GHz wireless development platform for Bluetooth experimentation
+    ii  ubertooth-firmware                   2018.08.R1-3                all          Firmware for Ubertooth
     ```
 
 ## get blue_hydra
@@ -96,13 +96,13 @@ ii  ubertooth-firmware                   2018.08.R1-3                all        
 1. create blue_hydra source directory. Execute:
 
     ```
-mkdir /usr/local/src/blue_hydra_`date +%Y%m%d`
+    mkdir /usr/local/src/blue_hydra_`date +%Y%m%d`
     ```
 
 1. get blue_hydra source. Execute:
 
     ```
-git clone https://github.com/pwnieexpress/blue_hydra.git /usr/local/src/blue_hydra_`date +%Y%m%d`
+    git clone https://github.com/pwnieexpress/blue_hydra.git /usr/local/src/blue_hydra_`date +%Y%m%d`
     ```
 
 ## '_bundle_' blue_hydra
@@ -110,77 +110,77 @@ git clone https://github.com/pwnieexpress/blue_hydra.git /usr/local/src/blue_hyd
 1. Change into the blue_hydra source directory and ensure contents were downloaded corrected. Execute:
 
     ```
-cd /usr/local/src/blue_hydra_`date +%Y%m%d`; ls
+    cd /usr/local/src/blue_hydra_`date +%Y%m%d`; ls
     ```
 
 1. Set permissions for the non-root user. Execute:
 
     ```
-chown blueh:blueh -R /usr/local/src/blue_hydra_`date +%Y%m%d`
+    chown blueh:blueh -R /usr/local/src/blue_hydra_`date +%Y%m%d`
     ```
 
 1. Change to another user; recommend not bundling as root:
 
     ```
-su blueh
+    su blueh
     ```
         
 1. run bundler (as non-root user). Execute:
 
     ```
-bundle install
+    bundle install
     ```
     
  * Results:
 
     ```
-Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this
-machine.
-Fetching gem metadata from http://rubygems.org/........
-Resolving dependencies...
-Using rake 12.3.1
-Fetching public_suffix 3.0.3
-Installing public_suffix 3.0.3
-Using addressable 2.5.2
-Using bundler 1.16.1
-Fetching coderay 1.1.2
-Installing coderay 1.1.2
-Fetching data_objects 0.10.17
-Installing data_objects 0.10.17
-Fetching diff-lcs 1.3
-Installing diff-lcs 1.3
-Fetching dm-core 1.2.1
-Installing dm-core 1.2.1
-Fetching dm-do-adapter 1.2.0
-Installing dm-do-adapter 1.2.0
-Fetching dm-migrations 1.2.0
-Installing dm-migrations 1.2.0
-Fetching do_sqlite3 0.10.17
-Installing do_sqlite3 0.10.17 with native extensions
-Fetching dm-sqlite-adapter 1.2.0
-Installing dm-sqlite-adapter 1.2.0
-Fetching dm-timestamps 1.2.0
-Installing dm-timestamps 1.2.0
-Fetching dm-validations 1.2.0
-Installing dm-validations 1.2.0
-Fetching louis 2.0.7
-Installing louis 2.0.7
-Fetching method_source 0.9.1
-Installing method_source 0.9.1
-Fetching pry 0.12.0
-Installing pry 0.12.0
-Fetching rspec-support 3.8.0
-Installing rspec-support 3.8.0
-Fetching rspec-core 3.8.0
-Installing rspec-core 3.8.0
-Fetching rspec-expectations 3.8.2
-Installing rspec-expectations 3.8.2
-Fetching rspec-mocks 3.8.0
-Installing rspec-mocks 3.8.0
-Fetching rspec 3.8.0
-Installing rspec 3.8.0
-Bundle complete! 8 Gemfile dependencies, 22 gems now installed.
-Use `bundle info [gemname]` to see where a bundled gem is installed.
+    Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this
+    machine.
+    Fetching gem metadata from http://rubygems.org/........
+    Resolving dependencies...
+    Using rake 12.3.1
+    Fetching public_suffix 3.0.3
+    Installing public_suffix 3.0.3
+    Using addressable 2.5.2
+    Using bundler 1.16.1
+    Fetching coderay 1.1.2
+    Installing coderay 1.1.2
+    Fetching data_objects 0.10.17
+    Installing data_objects 0.10.17
+    Fetching diff-lcs 1.3
+    Installing diff-lcs 1.3
+    Fetching dm-core 1.2.1
+    Installing dm-core 1.2.1
+    Fetching dm-do-adapter 1.2.0
+    Installing dm-do-adapter 1.2.0
+    Fetching dm-migrations 1.2.0
+    Installing dm-migrations 1.2.0
+    Fetching do_sqlite3 0.10.17
+    Installing do_sqlite3 0.10.17 with native extensions
+    Fetching dm-sqlite-adapter 1.2.0
+    Installing dm-sqlite-adapter 1.2.0
+    Fetching dm-timestamps 1.2.0
+    Installing dm-timestamps 1.2.0
+    Fetching dm-validations 1.2.0
+    Installing dm-validations 1.2.0
+    Fetching louis 2.0.7
+    Installing louis 2.0.7
+    Fetching method_source 0.9.1
+    Installing method_source 0.9.1
+    Fetching pry 0.12.0
+    Installing pry 0.12.0
+    Fetching rspec-support 3.8.0
+    Installing rspec-support 3.8.0
+    Fetching rspec-core 3.8.0
+    Installing rspec-core 3.8.0
+    Fetching rspec-expectations 3.8.2
+    Installing rspec-expectations 3.8.2
+    Fetching rspec-mocks 3.8.0
+    Installing rspec-mocks 3.8.0
+    Fetching rspec 3.8.0
+    Installing rspec 3.8.0
+    Bundle complete! 8 Gemfile dependencies, 22 gems now installed.
+    Use `bundle info [gemname]` to see where a bundled gem is installed.
     ```
 
 ## run application
@@ -190,7 +190,7 @@ Run as root.
 1. start application
 
     ```
-bundle exec ./bin/blue_hydra
+    bundle exec ./bin/blue_hydra
     ```    
 
 2. Press enter.
@@ -221,32 +221,32 @@ chunker_debug: false
 1. Copy existing yml config. Execute:
 
     ```
-cp blue_hydra.yml blue_hydra.yml.`date +%Y%m%d`.orig
+    cp blue_hydra.yml blue_hydra.yml.`date +%Y%m%d`.orig
     ```
 
 2. Make some changes. Execute:
 
     ```
-cat blue_hydra.yml
-log_level: info
-bt_device: hci0
-info_scan_rate: 60
-btmon_log: true
-btmon_rawlog: true
-file: false
-rssi_log: true
-aggressive_rssi: false
-ui_filter_mode: :disabled
-ui_inc_filter_mac: []
-ui_inc_filter_prox: []
-signal_spitter: false
-chunker_debug: false  
+    cat blue_hydra.yml
+    log_level: info
+    bt_device: hci0
+    info_scan_rate: 60
+    btmon_log: true
+    btmon_rawlog: true
+    file: false
+    rssi_log: true
+    aggressive_rssi: false
+    ui_filter_mode: :disabled
+    ui_inc_filter_mac: []
+    ui_inc_filter_prox: []
+    signal_spitter: false
+    chunker_debug: false  
     ```
 
 3. Run in deamon mode. 
 
     ```
-bundle exec ./bin/blue_hydra -d &
+    bundle exec ./bin/blue_hydra -d &
     ```     
 
 ## warning about the Fixnum issue
