@@ -38,40 +38,40 @@ Steps for the Raspberry Pi 3 Model B+:
    unxz --keep ~/Desktop/raspberry-pi/rpi/kali-linux-2018.4-rpi.img.xz
     ``` 
 
-2. Put SD card in mac 
-3. Launch Disk Utility app, select SD card - e.g. 32gb. Click Erase. Set as follows:
- * Name: KALI-PI-ARM
- * Format: MS-DOS (FAT)
- * Scheme: Master Boot Record
- * Click Erase    
-4. Locate SD card's path. Execute:
+3. Put SD card in mac 
+4. Launch Disk Utility app, select SD card - e.g. 32gb. Click Erase. Set as follows:
+  * Name: KALI-PI-ARM
+  * Format: MS-DOS (FAT)
+  * Scheme: Master Boot Record
+  * Click Erase    
+5. Locate SD card's path. Execute:
 
     ```
-   diskutil list
+    diskutil list
     ```
     
  * result:
  
     ```
-   /dev/disk2 (internal, physical):
-      #:                       TYPE NAME                    SIZE       IDENTIFIER
-      0:     FDisk_partition_scheme                        *32.0 GB    disk2
-      1:                 DOS_FAT_32 KALI                    32.0 GB    disk2s1
+    /dev/disk2 (internal, physical):
+       #:                       TYPE NAME                    SIZE       IDENTIFIER
+       0:     FDisk_partition_scheme                        *32.0 GB    disk2
+       1:                 DOS_FAT_32 KALI                    32.0 GB    disk2s1
     ```
-    
-5. Unmounting the drive.  Will use _disks2s1_; note _disks2s1_ is for `unmount` and changes to _rdisks2s1_ for `dd`
+
+6. Unmounting the drive.  Will use _disks2s1_; note _disks2s1_ is for `unmount` and changes to _rdisks2s1_ for `dd`
 
     ```
    sudo diskutil unmount disk2s1
     ```
 
- * result:
+  * result:
 
     ```
-   Volume KALI-PI-ARM on disk2s1 unmounted
+    Volume KALI-PI-ARM on disk2s1 unmounted
     ```
  
-1. Write image to SD card:
+7. Write image to SD card:
 
     ```   
    sudo dd if=kali-linux-2018.4-rpi3-nexmon.img of=/dev/rdisk2 bs=1m
@@ -86,7 +86,7 @@ Steps for the Raspberry Pi 3 Model B+:
    4499999744 bytes transferred in 135.691864 secs (33163372 bytes/sec)
     ```
 
-9. Check out disk util again
+8. Check out disk util again
 
     ```
    diskutil list
@@ -102,23 +102,22 @@ Steps for the Raspberry Pi 3 Model B+:
       2:                      Linux                         4.4 GB     disk2s2
     ```
 
-4. Unmount SD card. Actually I didn't use the command I used the Disk Utility app and unmounted the entire disk.
+9. Unmount SD card. Actually I didn't use the command I used the Disk Utility app and unmounted the entire disk.
 
     ```
    sudo diskutil unmountDisk disk2
     ```
     
- * result:
+  * result:
  
     ```
-   Unmount of all volumes on disk2 was successful
+    Unmount of all volumes on disk2 was successful
     ```
 
-4. Remove SD card from Mac laptop
-5. Put recently formatted SD card in Raspberry Pi
-6. Connect keyboard and mouse
-7. Turn on power to RaspberryPi
-
+10. Remove SD card from Mac laptop
+11. Put recently formatted SD card in Raspberry Pi
+12. Connect keyboard and mouse
+13. Turn on power to RaspberryPi
 
 
 ## Resources:
