@@ -63,13 +63,13 @@ All commands are executed as root.
     uname -a
     ```
 
- * result:
+  * result:
 
     ```
     Linux kali 4.14.71-kali-v7+ #1 SMP Sun Oct 14 00:17:58 UTC 2018 armv7l GNU/Linux
     ```
 
-2. Update and update Kali
+3. Update and update Kali
 
     ```
     apt-get update
