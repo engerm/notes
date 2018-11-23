@@ -1,5 +1,7 @@
 # Adding Ubertooth to blue_hydra and upgrading Ubertooth firmware
 
+Note: there was an issue upgrading the Ubertooth when the Ubertooth was plugged into a USB hub that was plugged into the KaliPi; some of these steps may not be needed if the Ubertooth is _directly_ plugged into the KaliPi or device.
+
 ## hardware
 
 * KaliPi: Raspberry Pi 3 Model B+ running Kali linux
@@ -23,12 +25,12 @@ Full and complete steps for upgrading Ubertooth firmware are on [Great Scott Gad
  * result:
 
     ```
-Blue Hydra : Devices Seen in last 300s, processing_speed: 1/s, DB Stunned: false
-Queue status: result_queue: 0, info_scan_queue: 2, l2ping_queue: 1
-Discovery status timer: 18, Ubertooth status: Disabled, firmware upgrade required, Filter mode: disabled
-UUID     |  SEEN ^ | VERS | ADDRESS           | RSSI | MANUF
-20942112 |     +2s | BTLE | 21:12:BA:XX:XX:XX | -37  | Something...
-47ea2112 |     +7s | BTLE | 21:12:CD:XX:XX:XX | -45  | Something...
+    Blue Hydra : Devices Seen in last 300s, processing_speed: 1/s, DB Stunned: false
+    Queue status: result_queue: 0, info_scan_queue: 2, l2ping_queue: 1
+    Discovery status timer: 18, Ubertooth status: Disabled, firmware upgrade required, Filter mode: disabled
+    UUID     |  SEEN ^ | VERS | ADDRESS           | RSSI | MANUF
+    20942112 |     +2s | BTLE | 21:12:BA:XX:XX:XX | -37  | Something...
+    47ea2112 |     +7s | BTLE | 21:12:CD:XX:XX:XX | -45  | Something...
     ```
 
 1. Create directory for Ubertooth firmware. Execute:
@@ -52,7 +54,7 @@ UUID     |  SEEN ^ | VERS | ADDRESS           | RSSI | MANUF
 1. Extract downloaded files. Execute:
 
     ```
-tar -xf ubertooth-2018-08-R1.tar.xz
+    tar -xf ubertooth-2018-08-R1.tar.xz
     ```
     
 1. Change directory. Execute:
@@ -71,13 +73,13 @@ tar -xf ubertooth-2018-08-R1.tar.xz
 
     ```
     libUSB Error: Pipe error:  (-9)
-Switching to DFU mode...
-Checking firmware signature
-........................................
-........................................
-........................................
-.
-control message unsupported
+        Switching to DFU mode...
+        Checking firmware signature
+        ........................................
+        ........................................
+        ........................................
+        .
+        control message unsupported
     ```
     
 1. Reset the Ubertooth. Execute:
@@ -102,13 +104,13 @@ control message unsupported
 
     ```
     libUSB Error: Pipe error:  (-9)
-Switching to DFU mode...
-Checking firmware signature
-........................................
-........................................
-........................................
-.
-control message unsupported
+        Switching to DFU mode...
+        Checking firmware signature
+        ........................................
+        ........................................
+        ........................................
+        .
+        control message unsupported
     ```
 
 1. Unplug ubertooth
@@ -123,13 +125,13 @@ control message unsupported
 
     ```
     libUSB Error: Pipe error:  (-9)
-Switching to DFU mode...
-Checking firmware signature
-........................................
-........................................
-........................................
-.
-control message unsupported
+        Switching to DFU mode...
+        Checking firmware signature
+        ........................................
+        ........................................
+        ........................................
+        .
+        control message unsupported
     ```
 
 1. Unplug ubertooth (from the usb hub)
@@ -143,13 +145,13 @@ control message unsupported
  * result
 
     ```
-Switching to DFU mode...
-Checking firmware signature
-........................................
-........................................
-........................................
-.
-Detached
+    Switching to DFU mode...
+    Checking firmware signature
+    ........................................
+    ........................................
+    ........................................
+    .
+    Detached
     ```
     
 1. Change back to working blue_hydra directory
@@ -162,9 +164,9 @@ Detached
  * result:
 
     ```
-Blue Hydra : Devices Seen in last 300s, processing_speed: 1/s, DB Stunned: false
-Queue status: result_queue: 0, info_scan_queue: 2, l2ping_queue: 0
-Discovery status timer: 18, Ubertooth status: 12, Filter mode: disabled
+    Blue Hydra : Devices Seen in last 300s, processing_speed: 1/s, DB Stunned: false
+    Queue status: result_queue: 0, info_scan_queue: 2, l2ping_queue: 0
+    Discovery status timer: 18, Ubertooth status: 12, Filter mode: disabled
     ```
 
 
