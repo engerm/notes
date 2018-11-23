@@ -18,7 +18,7 @@ All commands are executed as root.
 1. Execute the following to change the password:
 
     ```
-passwd
+    passwd
     ```
 
 2. Optional: create another user and disable SSH for root.
@@ -34,15 +34,15 @@ passwd
 1. Execute the following. _openssh-server_ is already installed.
 
     ```
-update-rc.d -f ssh remove
-update-rc.d -f ssh defaults
-mkdir /etc/ssh/orig-install-keys/
-mv /etc/ssh/ssh_host_* /etc/ssh/orig-install-keys/
-dpkg-reconfigure openssh-server
-sed -i -e "s/PermitRootLogin without-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
-update-rc.d -f ssh enable 2 3 4 5
-sed -i '1i-- my internal private server --" /etc/motd
-service ssh restart
+    update-rc.d -f ssh remove
+    update-rc.d -f ssh defaults
+    mkdir /etc/ssh/orig-install-keys/
+    mv /etc/ssh/ssh_host_* /etc/ssh/orig-install-keys/
+    dpkg-reconfigure openssh-server
+    sed -i -e "s/PermitRootLogin without-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
+    update-rc.d -f ssh enable 2 3 4 5
+    sed -i '1i-- my internal private server --" /etc/motd
+    service ssh restart
     ```
 
 2. Get IP address
@@ -54,26 +54,26 @@ service ssh restart
 1. Verify sources.list points to the correct repo. May have to execute:
 
     ```
-sed -i -e "s/#deb src/deb src/g" /etc/apt/sources.list
+    sed -i -e "s/#deb src/deb src/g" /etc/apt/sources.list
     ```
 
 1. get current version. execute:
 
     ```
-uname -a
+    uname -a
     ```
 
  * result:
 
     ```
-Linux kali 4.14.71-kali-v7+ #1 SMP Sun Oct 14 00:17:58 UTC 2018 armv7l GNU/Linux
+    Linux kali 4.14.71-kali-v7+ #1 SMP Sun Oct 14 00:17:58 UTC 2018 armv7l GNU/Linux
     ```
 
 2. Update and update Kali
 
     ```
-apt-get update
-apt-get upgrade
+    apt-get update
+    apt-get upgrade
     ```
 
 ## OPTIONAL: create user and group
@@ -83,13 +83,13 @@ This will create a user called 'blueh' that will be used to execute blue hydra; 
 1. Create user and allow for SSH. Execute:
 
     ```
-useradd -m -s $(which bash) -G sudo -d /home/ blueh
+    useradd -m -s $(which bash) -G sudo -d /home/ blueh
     ```
 
 2. Set password. Execute:
 
     ```
-passwd blueh
+    passwd blueh
     ```
     
 ## OPTIONAL: install other useful apps
@@ -97,6 +97,6 @@ passwd blueh
 1. Execute:
 
     ```
-apt-get -yf install sqlite3
+    apt-get -yf install sqlite3
     ```
     
