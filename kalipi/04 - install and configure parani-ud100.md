@@ -22,7 +22,7 @@ Poor documentation below. Not sure what exactly got it working. Maybe something 
 	lsusb
     ```
     
- * result should contain with DVB-T, meaning the OS has recognized the device and loaded the _correct_ drivers:
+  * result should contain with DVB-T, meaning the OS has recognized the device and loaded the _correct_ drivers:
 
     ```
 	Bus 001 Device 004: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)
@@ -62,7 +62,7 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
 	hcitool dev
     ```
     
- * result:    
+  * result:    
     
     ```
 	Devices:
@@ -76,7 +76,7 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
 	lsusb -v | grep -A25 0001
     ```
 
- * result:
+  * result:
     
     ```
 	Bus 001 Device 004: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)
@@ -123,7 +123,7 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
 	dpkg -l | egrep "bluez"
     ```
 
- * result:
+  * result:
 
     ```
 	ii  bluez                                5.50-1                       armhf        Bluetooth tools and daemons
@@ -142,7 +142,7 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
 	/usr/share/doc/bluez-test-scripts/examples/test-adapter list
     ```
     
- * result:
+  * result:
 
     ```
 	[ /org/bluez/hci0 ]
@@ -183,7 +183,7 @@ _random actions..._ that probably were pointless
 	hciconfig -a
     ```
 
- * result:
+  * result:
 
     ```
 	hci1:	Type: Primary  Bus: UART
@@ -213,7 +213,7 @@ _random actions..._ that probably were pointless
 	lsusb
     ```
 
- * result:
+  * result:
 
     ```
 	Bus 001 Device 004: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)
@@ -229,7 +229,7 @@ _random actions..._ that probably were pointless
 	lsusb -v
     ```
 
- * result:
+  * result:
 
     ```
 	Bus 001 Device 004: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)
@@ -488,7 +488,7 @@ _random actions..._ that probably were pointless
 	rfkill list
     ```
 
- * result:
+  * result:
 
     ```
 	0: hci0: Bluetooth
@@ -508,7 +508,7 @@ _random actions..._ that probably were pointless
 	service bluetooth restart
     ```
 
- * result:
+  * result:
 
     ```
 	[nothing]
@@ -520,7 +520,7 @@ _random actions..._ that probably were pointless
 	service bluetooth status
     ```
 
- * result:
+  * result:
 
     ```
 	● bluetooth.service - Bluetooth service
@@ -556,7 +556,7 @@ _random actions..._ that probably were pointless
 	service bluetooth status
     ```
 
- * result:
+  * result:
 
     ```
 	[nothing...]	
@@ -568,7 +568,7 @@ _random actions..._ that probably were pointless
 	service bluetooth status
     ```
 
- * result:
+  * result:
 
     ```
 	[same as last time]
@@ -587,7 +587,7 @@ _random actions..._ that probably were pointless
 	service bluetooth status
     ```
 
- * result:
+  * result:
 
     ```
 	[nothing...]	
@@ -599,7 +599,7 @@ _random actions..._ that probably were pointless
 	hciconfig dev
     ```
 
- * result:
+  * result:
 
     ```
 	hci0:	Type: Primary  Bus: USB
@@ -615,7 +615,7 @@ _random actions..._ that probably were pointless
 	hcitool scan
     ```
 
- * result:
+  * result:
 
     ```
 	Scanning ...
@@ -628,7 +628,7 @@ _random actions..._ that probably were pointless
 	hciconfig hci0 piscan
     ```
 
- * result:
+  * result:
 
     ```
 	[nothing...]	
@@ -640,7 +640,7 @@ _random actions..._ that probably were pointless
 	hciconfig -a
     ```
 
- * result:
+  * result:
 
     ```
 	hci1:	Type: Primary  Bus: UART
@@ -683,7 +683,7 @@ _random actions..._ that probably were pointless
 	bundle exec ./bin/blue_hydra -d
     ```
 
- * result:
+  * result:
 
     ```
 	worked as expeced
@@ -703,7 +703,7 @@ _hmmmm...._
 	hciconfig -a
     ```
 
- * result:
+  * result:
 
     ```
 	hci1:	Type: Primary  Bus: UART
@@ -740,7 +740,7 @@ _hmmmm...._
 	hciconfig -a
     ```
 
- * result:
+  * result:
 
     ```
 	hci1:	Type: Primary  Bus: UART
@@ -760,7 +760,7 @@ _hmmmm...._
 	lsusb
     ```
 
- * result:
+  * result:
 
     ```
 	Bus 001 Device 006: ID 0424:7800 Standard Microsystems Corp.
