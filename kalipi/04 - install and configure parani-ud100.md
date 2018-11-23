@@ -16,24 +16,24 @@ Poor documentation below. Not sure what exactly got it working. Maybe something 
 ## Adding the Parani-UD100
 
 1. Connect device into the Pi.
-1. Locate connected USB device. Execute
+1. Locate connected USB device. Execute:
 
     ```
 	lsusb
     ```
-    
+
   * result should contain with DVB-T, meaning the OS has recognized the device and loaded the _correct_ drivers:
 
     ```
 	Bus 001 Device 004: ID 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode)
     ```
- 
-1. Check loaded DVB devices. Execute:
+
+3. Check loaded DVB devices. Execute:
 
     ```
 	lsmod  | grep dvb
     ```
-    
+
  * result
 
     ```
@@ -44,7 +44,7 @@ Poor documentation below. Not sure what exactly got it working. Maybe something 
 
 _... where things get fuzzy..._ combination of troubleshooting, listing configs, installing, configuring, unconfiguring, reconfiguring, and then realizing something worked (or maybe it worked all along and your an idiot).
  
-1. Install random stuff... Execute:
+4. Install random stuff... Execute:
 
     ```
 	apt-get install bluetooth bluez-cups bluez-obexd bluez-hcidump bluez-tools
@@ -58,19 +58,19 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
 
 1. Display local bluetooth devices. Execute:    
 
-    ```    
+    ```
 	hcitool dev
     ```
-    
-  * result:    
-    
+
+  * result:
+
     ```
 	Devices:
 		hci1	B8:27:EB:9B:9E:12
 		hci0	00:01:95:48:90:91
     ```
 
-1. List usb devices. Execute:
+7. List usb devices. Execute:
 
     ```
 	lsusb -v | grep -A25 0001
@@ -117,7 +117,7 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
 	      iInterface              0
     ```
 
-1. List installed packages. Execute:
+8. List installed packages. Execute:
 
     ```
 	dpkg -l | egrep "bluez"
@@ -136,7 +136,7 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
 	ii  python-bluez                         0.22+really0.22-1            armhf        Python 2 wrappers around BlueZ for rapid bluetooth development
     ```
 
-1. List bluetooth. Execute:
+9. List bluetooth. Execute:
 
     ```
 	/usr/share/doc/bluez-test-scripts/examples/test-adapter list
@@ -177,7 +177,7 @@ _... where things get fuzzy..._ combination of troubleshooting, listing configs,
     ```    
 _random actions..._ that probably were pointless
 
-1. Execute:
+10. Execute:
 
     ```
 	hciconfig -a
@@ -207,7 +207,7 @@ _random actions..._ that probably were pointless
 		Link mode: SLAVE ACCEPT
     ```
     
-1. Execute:
+11. Execute:
 
     ```
 	lsusb
@@ -223,7 +223,7 @@ _random actions..._ that probably were pointless
 	Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
     ```
 
-1. Execute:
+12. Execute:
 
     ```
 	lsusb -v
@@ -482,7 +482,7 @@ _random actions..._ that probably were pointless
 	  Self Powered
     ```
 
-1. Execute:
+13. Execute:
 
     ```
 	rfkill list
@@ -502,7 +502,7 @@ _random actions..._ that probably were pointless
 		Hard blocked: no
     ```
 
-1. Execute:
+14. Execute:
 
     ```
 	service bluetooth restart
@@ -514,7 +514,7 @@ _random actions..._ that probably were pointless
 	[nothing]
     ```
 
-1. Execute:
+15. Execute:
 
     ```
 	service bluetooth status
@@ -543,14 +543,14 @@ _random actions..._ that probably were pointless
 	Nov 13 23:40:42 kali bluetoothd[1285]: sap-server: Operation not permitted (1)
     ```
 
-1. Execute:
+16. Execute:
 
     ```
 	echo "blacklist hci_usb" >> /etc/modprobe.d/blacklist
 	echo "hci_usb reset=1" >> /etc/modules
     ```
 
-1. Execute:
+17. Execute:
 
     ```
 	service bluetooth status
@@ -562,7 +562,7 @@ _random actions..._ that probably were pointless
 	[nothing...]	
     ```
 
-1. Execute:
+18. Execute:
 
     ```
 	service bluetooth status
@@ -574,14 +574,14 @@ _random actions..._ that probably were pointless
 	[same as last time]
     ```
 
-1. Undo the following:
+19. Undo the following:
 
     ```
 	echo "blacklist hci_usb" >> /etc/modprobe.d/blacklist
 	echo "hci_usb reset=1" >> /etc/modules
     ```
 
-1. Execute:
+20. Execute:
 
     ```
 	service bluetooth status
@@ -593,7 +593,7 @@ _random actions..._ that probably were pointless
 	[nothing...]	
     ```
 
-1. Execute:
+21. Execute:
 
     ```
 	hciconfig dev
@@ -609,7 +609,7 @@ _random actions..._ that probably were pointless
 		TX bytes:10108 acl:0 sco:0 commands:314 errors:0
     ```
 
-1. Execute:
+22. Execute:
 
     ```
 	hcitool scan
@@ -622,7 +622,7 @@ _random actions..._ that probably were pointless
 
     ```
 
-1. Execute:
+23. Execute:
 
     ```
 	hciconfig hci0 piscan
@@ -634,7 +634,7 @@ _random actions..._ that probably were pointless
 	[nothing...]	
     ```
 
-1. Execute:
+24. Execute:
 
     ```
 	hciconfig -a
@@ -677,7 +677,7 @@ _random actions..._ that probably were pointless
 		Manufacturer: Cambridge Silicon Radio (10)	
     ```
 
-1. Tried running blue_hydra again because it wasn't working with the adapter in it. Execute:
+25. Tried running blue_hydra again because it wasn't working with the adapter in it. Execute:
 
     ```
 	bundle exec ./bin/blue_hydra -d
@@ -691,13 +691,13 @@ _random actions..._ that probably were pointless
 
 _hmmmm...._
 
-1. Execute:
+26. Execute:
 
     ```
 	hciconfig hci1 down
     ```
     
-1. Execute:
+27. Execute:
 
     ```
 	hciconfig -a
@@ -733,8 +733,8 @@ _hmmmm...._
 		Manufacturer: Cambridge Silicon Radio (10)
     ```
 
-1. Unplug the adapter:
-1. Execute:
+28. Unplug the adapter:
+29. Execute:
 
     ```
 	hciconfig -a
@@ -754,7 +754,7 @@ _hmmmm...._
 		Link mode: SLAVE ACCEPT
     ```
 
-1. Execute:
+30. Execute:
 
     ```
 	lsusb
@@ -769,17 +769,17 @@ _hmmmm...._
 	Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub		
     ```
 
-2. Realize the Parani-UD100 was working.
-3. Look at palm of hand
-4. Close eyes.
-5. Gently lift arm and slap open palm to forehead.
+31. Realize the Parani-UD100 was working.
+32. Look at palm of hand
+33. Close eyes.
+34. Gently lift arm and slap open palm to forehead.
  * result:
  
     ```
 	[soft snapping sound]
     ```
     
-1. Run blue_hydra as before...
+35. Run blue_hydra as before...
 
 ## resources
 
