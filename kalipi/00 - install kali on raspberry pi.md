@@ -20,11 +20,12 @@ Steps for the Raspberry Pi 3 Model B+:
 1. Download arm image from [Kali](https://www.offensive-security.com/kali-linux-arm-images/): Kali Linux RaspberryPi 2 and 3
   * Downloaded _kali-linux-2018.4-rpi3-nexmon.img.xz_ 
   
-1. Verify sha256. Execute the following command on the download file and ensure the sha256 from the downloaded file matches that sha256 on the Kali site. Execute:
+2. Verify sha256. Execute the following command on the download file and ensure the sha256 from the downloaded file matches that sha256 on the Kali site. Execute:
 
     ```
 shasum -a 256 *
     ```
+    
  * Result:
 
     ```
