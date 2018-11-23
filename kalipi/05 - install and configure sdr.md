@@ -23,11 +23,11 @@ Basic install steps. Have not used the SDR much so the below steps may be incomp
     ```
     lsusb
     ```
-    
+
   * result should contain with DVB-T, meaning the OS has recognized the device and loaded the _correct_ drivers:
 
     ```
-Bus 001 Device 009: ID 0bda:2832 Realtek Semiconductor Corp. RTL2832U DVB-T
+    Bus 001 Device 009: ID 0bda:2832 Realtek Semiconductor Corp. RTL2832U DVB-T
     ```
  
 1. Check loaded DVB devices. Execute:
