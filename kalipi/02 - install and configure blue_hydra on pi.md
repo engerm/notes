@@ -1,4 +1,4 @@
-# Installing BlueHydra / blue_hydra / Blue Hydra - 2018110
+# Installing BlueHydra / blue_hydra / Blue Hydra - 2018125
 
 Not sure what the proper name if for BlueHydra / blue_hydra / Blue Hydra, but here are the steps to install and configure.
 
@@ -248,6 +248,14 @@ chunker_debug: false
     ```
     bundle exec ./bin/blue_hydra -d &
     ```     
+
+4. *Optional*: Move main log files. By default _blue_hydra_chunk.log_, _blue_hydra.log_, _blue_hydra_rssi.log_ are stored in the main BlueHydra directory. To move those three (3) files to another directory, execute:
+
+    ```
+    mkdir /var/log/pwnix/
+    ```   
+    *NOTE*: the _btmon_raw_[timestamp].log.gz_ and _btmon_raw_[timestamp].log.gz_ logs will still remain in the main BlueHydra directory.
+
 
 ## warning about the Fixnum issue
 
