@@ -38,7 +38,7 @@ _The below changes and modification were used to configure zeek on Kali and Cent
     echo -e "@load policy/protocols/krb/ticket-logging\t# enabling - enable Kerberos hash logging" >> /usr/local/bro/share/bro/site/local.bro
     echo -e "@load policy/protocols/mysql/software\t# enabling" >> /usr/local/bro/share/bro/site/local.bro
     echo -e "@load policy/protocols/rdp/indicate_ssl\t# enabling" >> /usr/local/bro/share/bro/site/local.bro
-echo -e "@load policy/protocols/smb\t# enabling" >> /usr/local/bro/share/bro/site/local.bro
+    echo -e "@load policy/protocols/smb\t# enabling" >> /usr/local/bro/share/bro/site/local.bro
     echo -e "@load policy/protocols/smtp/detect-suspicious-orig\t# enabling - smtp geolocation" >> /usr/local/bro/share/bro/site/local.bro
     echo -e "@load policy/protocols/ssl/expiring-certs\t# enabling - track expired/expiring certs" >> /usr/local/bro/share/bro/site/local.bro
     echo -e "@load policy/protocols/ssl/validate-ocsp\t# enabling" >> /usr/local/bro/share/bro/site/local.bro
